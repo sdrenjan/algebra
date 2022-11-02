@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio i video</title>
+</head>
+
+<body>
+    <h1>Multimedijski sadržaji u HTML-u</h1>
+    <h2>Audio</h2>
+
+    <audio src="../media/audio/in3s.mp3" controls></audio>
+
+    <audio controls>
+        <source src="../media/audio/in3s.mp3" type="audio/mpeg">
+        <source src="../media/audio/in3s.ogg" type="audio/ogg">
+    </audio>
+    <hr>
+
+    <h2>Video</h2>
+    <video controls autoplay src="../media/video/mountains.mp4" width="390"></video>
+
+    <video width="390" controls muted loop poster="../media/images/gradovi/london.jpg">
+        <source src="../media/video/mountains.mp4" type="video/mp4">
+        <source src="../media/video/mountains.webm" type="video/webm">
+        <p>Vaš preglednik ne podržava prikazivanje video sadržaja!</p>
+    </video>
+
+</body>
+
+</html>

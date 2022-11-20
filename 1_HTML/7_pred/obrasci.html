@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci</title>
+</head>
+
+<body>
+    <h1>Kontakt obrazac</h1>
+    <hr>
+
+    <form name="Kontakt Obrazac" action="" method="post" enctype="multipart/form-data" autocomplete="off">
+
+        <p>
+            <label for="ime">Ime i prezime<sup>*</sup></label><br>
+            <input id="ime" name="imeiprezime" type="text" size="30" maxlength="10" placeholder="Unesite Vaše ime" required>
+        </p>
+
+        <p>
+            <label for="mail">E-mail adresa</label><br>
+            <input id="mail" name="email" type="email" size="30" placeholder="nino@example.com">
+        </p>
+
+        <p>
+            <label for="phone">Broj telefona</label><br>
+            <input id="phone" name="tel" type="tel" size="30">
+        </p>
+
+        <p>
+            <label for="password">Lozinka</label><br>
+            <input id="password" name="password" type="password" required size="30">
+        </p>
+
+        <p>
+            <label for="color">Odaberite boju vašeg novog BATmobila</label><br>
+            <input id="color" name="boja" type="color">
+        </p>
+
+        <p>
+            <label for="subscription">Želim primati obavijesti</label><br>
+            <input id="subscription" name="newsletter" type="checkbox" value="true">
+        </p>
+
+        <hr>
+
+        <p>
+            Ocijenite usluge naše tvrtke<br>
+            <input id="ocjena1" name="ocjena" value="1" type="radio">
+            <label for="ocjena1">Nisam baš zadovoljan/a</label>
+            <input id="ocjena2" name="ocjena" value="2" type="radio">
+            <label for="ocjena2">Djelomično sam zadovoljan/a</label>
+            <input id="ocjena3" name="ocjena" value="1" type="radio">
+            <label for="ocjena3">Vrlo sam zadovoljan/a</label>
+        </p>
+
+        <p>
+            <label for="dokument">Priložite datoteku</label><br>
+            <input id="dokument" name="dokument" type="file">
+
+        </p>
+
+        <hr>
+
+        <p>
+            <label for="komentar">OBJASNITE u ČEMU JE PROBLEM s vašom pošiljkom</label><br>
+            <textarea name="komentar" id="komentar" cols="45" rows="10" maxlength="45" required></textarea>
+        </p>
+
+        <hr>
+
+        <p>
+            <label for="grad">Odaberite grad</label><br>
+            <select id="grad" required>
+                <option value="pariz">Pariz</option>
+                <option value="london">London</option>
+                <option value="rim">Rim</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="programi">Odaberite program obrazovanja</label>
+            <input id="programi" name="programi" type="text" list="ProgramiIzListe">
+            <datalist id="ProgramiIzListe">
+                <option value="Front-End Developer">
+                <option value="Matematika">
+                <option value="Državna matura">
+            </datalist>
+        </p>
+
+        <p>
+            <button type="submit">Pošalji podatke</button>
+            <button type="reset">Resetiraj podatke</button>
+        </p>
+
+    </form>
+
+</body>
+
+</html>

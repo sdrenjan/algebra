@@ -1,0 +1,40 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    color: #000;
+    background: url(img/pattern.png),
+                url(img/cloth.jpg);
+}
+
+h1 {
+    font-family: 'Patrick Hand', cursive;
+    text-decoration: underline black;
+}
+
+ul {
+    font-weight: bold;
+}
+
+ol {
+    font-size: 1.3rem;
+}
+
+img {
+    width: 39%;
+    margin-right: 20%;
+    margin-top: 2rem;
+}
+
+section:first-of-type {
+    width: 20%;
+    display: inline-block;
+    margin-left: 20%;
+}
+
+section:last-of-type {
+    background-color: hsl(33, 27%, 75%);
+    width: 55%;
+    padding: 2rem;
+    margin: 2rem auto;
+}
+

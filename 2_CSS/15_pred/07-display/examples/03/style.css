@@ -1,0 +1,19 @@
+body {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+}
+
+.button {
+    background-color: crimson;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px 0 20px 0;
+    box-shadow: 16px 12px 5px black;
+}
+
+.button:hover {
+    box-shadow: none;
+}

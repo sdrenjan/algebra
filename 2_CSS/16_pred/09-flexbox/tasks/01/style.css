@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+​
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+​
+nav {
+    margin: 1em;
+}
+​
+div {
+    background-color: cornflowerblue;
+    border: 3px solid lightskyblue;
+    border-radius: 10px;
+    padding: 1em;
+    text-align: center;
+}
+​
+.flex {
+    display: flex;
+    justify-content: space-between;
+}

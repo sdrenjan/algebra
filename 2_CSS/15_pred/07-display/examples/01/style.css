@@ -30,7 +30,8 @@ em {
     margin: 20px
 }
 
+
 .none {
     display: none;
+    /* visibility: hidden; */
 }
-

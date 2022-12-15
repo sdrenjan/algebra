@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+
+div:first-of-type {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 100%;
+    animation: animation1 10s linear infinite;
+}
+
+@keyframes animation1 {
+    0% {
+      background-color: hsl(240, 100%, 50%);
+    }
+  
+    30% {
+      background-color: hsl(350, 100%, 50%);
+    }
+  
+    50% {
+        background-color: hsl(420, 100%, 50%);
+    }
+
+    100% {
+        background-color: hsl(600, 100%, 50%);
+      }
+  }
+
+  div:nth-of-type(2) {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation: animation2 2s ease-in-out infinite alternate;
+    position: relative;
+}
+
+@keyframes animation2 {
+    0% {
+      left: 0;
+      top: 20px;
+    }
+  
+    50% {
+        left: 100px;
+        top: 0;
+      }
+    
+      100% {
+        left: 200px;
+        top: 20px;
+      } 
+  }
+
+  div:last-of-type {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(232, 97, 187);
+    position: relative;
+    left: 50px;
+    animation: animation3 3s ease-out infinite;
+
+}
+
+@keyframes animation3 {
+    0% {
+      transform: rotate(0deg);
+      box-shadow: -10px 10px lightgrey;
+    }
+  
+    50% {
+      transform: rotate(-30deg);
+      box-shadow: -20px 20px lightgrey;
+    }
+  
+    100% {
+        transform: rotate(-30deg) skew(20deg);
+        box-shadow: -50px 50px lightgrey;
+    }
+  }

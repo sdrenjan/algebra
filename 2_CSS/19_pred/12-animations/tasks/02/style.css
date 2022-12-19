@@ -15,12 +15,16 @@ div:first-of-type {
       background-color: hsl(240, 100%, 50%);
     }
   
-    30% {
+    25% {
       background-color: hsl(350, 100%, 50%);
     }
   
     50% {
         background-color: hsl(420, 100%, 50%);
+    }
+
+    75% {
+      background-color: hsl(500, 100%, 50%);
     }
 
     100% {
@@ -57,6 +61,7 @@ div:first-of-type {
     height: 100px;
     width: 100px;
     background-color: rgb(232, 97, 187);
+    box-shadow: -10px 10px lightgrey;
     position: relative;
     left: 50px;
     animation: animation3 3s ease-out infinite;
@@ -66,7 +71,6 @@ div:first-of-type {
 @keyframes animation3 {
     0% {
       transform: rotate(0deg);
-      box-shadow: -10px 10px lightgrey;
     }
   
     50% {
@@ -75,7 +79,7 @@ div:first-of-type {
     }
   
     100% {
-        transform: rotate(-30deg) skew(20deg);
+        transform: rotate(-40deg) skew(20deg);
         box-shadow: -50px 50px lightgrey;
     }
   }

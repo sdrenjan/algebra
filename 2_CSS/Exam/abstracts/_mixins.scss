@@ -1,0 +1,9 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin animation($delay) {
+  animation: animation 1.5s ease-in $delay forwards; 
+}

@@ -1,0 +1,52 @@
+@import "base/reset";
+@import "base/colors";
+@import "abstracts/mixins";
+
+body {
+    background: url('media/blur-clean.jpg') center center/cover no-repeat fixed;
+    color: $color4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 10vw;
+    font-weight: bold;
+}
+
+.wrapper {
+    height: 100vh;
+    @include flex;
+
+    div {
+        width: 25vw;
+        height: 20vw;
+        border: 5px solid $color4;
+        @include flex;
+        position: relative;
+        top: -80vh;
+        
+
+        &:first-child {
+            background-color: $color1;
+            @include animation(0s);
+        }
+
+        &:nth-child(2) {
+            background-color: $color2;
+            @include animation(1.5s);
+        }
+
+        &:last-child {
+            background-color: $color3;
+            @include animation(3s);
+        }
+    }
+}
+
+@keyframes animation {
+    0% {
+      top: -80vh;
+    }
+  
+    100% {
+      top: 0;
+    }
+  }

@@ -1,0 +1,106 @@
+$primary: #EEE;
+$secondary: #333;
+$red: #800;
+$orange: #F93;
+$family: Tahoma, sans-serif;
+
+@mixin style {
+    background-color: $secondary;
+    color: $primary;
+    margin-top: 0px;
+}
+
+@mixin button {
+    background-color: $red;
+    color: $primary;
+    text-decoration: none;
+    padding: 10px 130px;
+
+    &:hover {
+        background-color: $primary;
+        color: $red;
+    }
+
+    &:active {
+        background-color: $primary;
+        color: $orange;
+    }
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $family;
+    background-color: $primary;
+    color: $secondary;
+    text-align: center;
+}
+
+header,
+nav,
+footer,
+main,
+section {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+h1,
+h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+header,
+footer {
+    @include style;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+a {
+    @include button();
+    display: inline-block;
+    margin: 10px auto;
+    text-align: center;
+}
+
+header p{
+    padding: 10px 0;
+}
+
+main,
+footer {
+    @include flex();
+    h1 {
+        flex-basis: 100%
+    }
+
+main {
+    max-width: 70vw;
+}  
+    section {
+        border: 2px solid $secondary;
+        flex-basis: 32%;
+    }
+}
+
+footer {
+    section {
+        flex-basis: 49%;
+    }
+}
+

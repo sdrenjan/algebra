@@ -6,13 +6,13 @@ body {
 }
 
 p:first-of-type {
-    background: #FFC url(../../../images/light-bulb.png) center center/30% no-repeat;
+    background: #FFC url(../../images/light-bulb.png) center center/30% no-repeat;
     opacity: 0.5;
 }
 
 p:nth-of-type(3) {
-    background: url(../../../images/orange.png) right top/150px no-repeat,
-    url(../../../images/butterfly.png) left center/contain no-repeat,
-    url(../../../images/coffee-cup.png) center center/contain no-repeat,
-    #CCF url(../../../images/pattern.png);
+    background: url(../../images/orange.png) right top/150px no-repeat,
+    url(../../images/butterfly.png) left center/contain no-repeat,
+    url(../../images/coffee-cup.png) center center/contain no-repeat,
+    #CCF url(../../images/pattern.png);
 }

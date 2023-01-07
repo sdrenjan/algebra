@@ -1,0 +1,27 @@
+Pratite kod u script.js
+
+1. Koja je vrijednost varijable trueFalse? Čemu služe dvostruki negacijski znakovi?
+
+2., 3. i 4. Koju će vrijednost ispisati console.log? Zašto?
+
+1. Prva negacija pretvara bilo koji tip podatka u boolean obrnute vrijednosti (false, null, undefined, 0, -0, NaN, and '' (empty string) su "falsy" values, a sve ostale "truthy) pa je npr. !NaN = true, zatim druga negacija ponovo invertira vrijednost tako da je !!Nan = false čime dvostruka negacija (not not) zapravo pretvara bilo koji tip podataka u boolean s njegovom pravom vrijednosti true ili false.
+
+var trueFalse = !!"false" == !!"true"; 
+dvostruka negacija 2 stringa tj. trueFalse = true == true tj. true
+
+2. ovaj me skroz zbunjuje, prema compileru odgovor je Lorem ipsum, ako sam dobro shvatila dokumentaciju, izjava se redom provjerava i čim je prvi točan njega ispisuje, daljnje usporedbe zanemaruje? 
+
+(prema ovome: Short-circuit evaluation
+The logical OR expression is evaluated left to right, it is tested for possible "short-circuit" evaluation using the following rule:
+
+(some truthy expression) || expr is short-circuit evaluated to the truthy expression.
+
+Short circuit means that the expr part above is not evaluated, hence any side effects of doing so do not take effect (e.g., if expr is a function call, the calling never takes place). This happens because the value of the operator is already determined after the evaluation of the first operand.)
+
+3. ispisat će 5 jer je -- dekrement za vrijednost 1 tj. 6-1
+
+4. ispisat će vrijednost totalPrice, a ne totalPrice.toFixed(2) tj. zaokruženo na 2 decimale jer nismo metodu dodijelili varijabli totalPrice pa se nije promijenila vrijednost
+
+
+
+

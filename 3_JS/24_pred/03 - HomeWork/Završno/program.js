@@ -14,10 +14,10 @@ function createTable(ROWS, cols) {
   var j = 1;
   var table = "<table border='1' width='500' cellspacing='0' cellpadding='5'>";
 
-  FOR (i = 1; i <= ROWS; i++) {
+  for (i = 1; i <= ROWS; i++) {
     table = table + '<tr>';
-    WHILE (j <= cols) {
-      table = table + '<td>' + i * j + '</td>';
+    while (j <= cols) {
+      table = `${table}<td>${i * j}</td>`;
       j = j + 1;
     }
     table = table + '</tr>';

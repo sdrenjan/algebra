@@ -1,0 +1,9 @@
+1. let count = 3;
+while (count < 20) {
+    if (count % 9 != 0) {
+        console.log(count);
+    }
+    count++;
+}
+
+2. odgovor je 16 tj. u svakoj i iteraciji obavi 4 j iteracije odnosno 4 * 4 puta dodaje 1 na varOne

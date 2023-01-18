@@ -17,4 +17,4 @@ var baaa = "b" + "a" + +"a" + "a";
 // baNaNa - + +"a" shvaća kao +0+"a" čija je vrijednost onda NaN, a ostali su stringovi pa i taj NaN pretvara u string
 
 // 4. Provjerite tip podatka varijable w.
-// w nije definirana
+// w nije definirana typeof(w) => undefined (string)

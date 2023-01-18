@@ -1,0 +1,286 @@
+/* 
+ * Copyright 2022 Nino Škuflić <nino.skuflic@predavaci.algebra.hr>.  
+ */
+
+
+/*----------------------------------------------------------------------------* 
+ * TABLE OF CONTENTS
+ * - Selectors
+ * - Pseudo-classes
+ * - Pseudo-elements
+ * - Background Color
+ * - Box Model
+ * - Display (none, visibility, box-sizing)
+ * - Position
+ * - Flex
+ *----------------------------------------------------------------------------*/
+
+/**************************************************
+ * SELECTORS
+**************************************************/
+
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+    background-color: azure;
+    padding: 20px;
+    font-weight: 100;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    /* 2 * 16px = 32px */
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: medium;
+}
+
+a {
+    color: #333;
+}
+
+em {
+    text-decoration: underline;
+}
+
+/* CLASS SELECTORS */
+
+.article-paragraph {
+    font-size: 13px;
+    font-weight: 100;
+}
+
+/* ID SELECTORS */
+
+#important {
+    font-weight: bold;
+}
+
+#main {
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 2em;
+}
+
+#main h1 {
+    margin-bottom: 0px;
+}
+
+#main p {
+    margin-top: 0px;
+}
+
+/* ATTRIBUTE SELECTORS */
+
+[title] {
+    text-decoration: underline solid #333;
+}
+
+[title="first paragraph"] {
+    font-weight: bold;
+}
+
+/**************************************************
+ * PSEUDO-CLASSES
+**************************************************/
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: greenyellow;
+}
+
+/* The :nth-child() CSS pseudo-class matches elements based on their position among a group of siblings. */
+p:nth-child(2) {
+    font-family: 'Courier New', Courier, monospace
+}
+
+/* The :first-of-type CSS pseudo-class represents the first element of its type among a group of sibling elements. */
+p:first-of-type {
+    font-weight: bold;
+}
+
+/**************************************************
+ * PSEUDO-ELEMENTS
+**************************************************/
+
+/* Selects the whole first line, of any paragraph */
+p::first-line {
+    color: blue;
+}
+
+/**************************************************
+ * BACKGROUND COLOR
+**************************************************/
+
+body {
+    background-color: aliceblue;
+}
+
+p {
+    background-color: #eee;
+}
+
+/**************************************************
+ * BOX MODEL
+**************************************************/
+
+/* Width */
+.change-width {
+    /* Units: px, %, em, rem */
+    width: 50%;
+}
+
+/* Padding */
+.padding {
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 5px;
+    /* padding: 20px 30px 50px 5px; */
+}
+
+/* Margin */
+.margin {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    margin-left: 5px;
+    /* margin: 20px 30px 50px 5px; */
+}
+
+/* Can be useful to center an element to the center of the screen */
+.margin-auto {
+    margin: 20px auto;
+}
+
+/**************************************************
+ * DISPLAY
+**************************************************/
+
+/* Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
+Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+
+Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements. */
+
+/* How do we calculate the WIDTH of an element?
+width (set by us) + padding-left + padding-right + border-left + border-right = TOTAL WIDTH
+
+How do we calculate the HEIGHT of an element?
+height (set by us) + padding-top + padding-bottom + border-top + border-bottom = TOTAL HEIGHT */
+
+/* Display the element as an BLOCK element */
+.block {
+    display: block;
+}
+
+/* Display the element as an INLINE element */
+.inline {
+    display: inline;
+}
+
+/* One common use for display: inline-block is to display list items horizontally instead of vertically. */
+.inline-block {
+    display: inline-block;
+}
+
+/* Do Not Display the element. It's like the element has never been there. */
+.none {
+    display: none;
+}
+
+/* The element is still there (other element's cannot take it's place), but the element's visibility is HIDDEN. */
+.visibility {
+    visibility: hidden;
+}
+
+/* Border Box RESPECTS our set width. If we set an element's width to e.g. 400px, and give padding of 10px, the BORDER-BOX will fit everything in 400px.
+
+Content Box (default value of box-sizing) DOES NOT RESPECT our set width. Instead, the 400px width will be taken, and e.g. for a padding set of 20px, the total width will be 440px (400px for our set width + 20px for padding-left + 20px for padding-right. */
+.box {
+    box-sizing: border-box;
+}
+
+/**************************************************
+ * POSITION
+**************************************************/
+
+/* The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky). */
+
+div {
+    position: static;
+    position: absolute;
+    position: relative;
+    position: sticky;
+}
+
+/**************************************************
+ * FLEX
+ * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+**************************************************/
+
+/* Please visit the above-mentioned guide for all Flex Related questions. */
+
+.flex-container {
+    display: flex;
+}
+
+/**************************************************
+ * TRANSFORMATIONS
+**************************************************/
+
+.translate {
+    transform: translate(150px, -20px);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.rotate {
+    transform: rotate(30deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.scale {
+    transform: scale(1.5);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.skew {
+    transform: skew(20deg, 15deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}
+
+.multiple {
+    transform: rotate(30deg) scale(0.5, 0.3) skew(20deg, 15deg);
+
+    background-color: azure;
+    border: 1px solid #333;
+    width: 300px;
+    height: 150px;
+    margin: 4em auto;
+}

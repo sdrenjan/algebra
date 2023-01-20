@@ -1,49 +1,28 @@
-var body = document.querySelector("body");
-var li = document.querySelectorAll("li");
-var info = document.querySelector(".info");
-var h3 = document.querySelector("h3");
+//1
+const ulEl = document.querySelector('ul');
+ulEl.style.listStyleType = 'decimal';
 
-// 1st Task
-for (var i = 0; i < 5; i++) {
-    li[i].style.listStyleType = "decimal";
-}
+//2
+const divPivo = document.querySelector('.info');
+divPivo.setAttribute('class', 'hide');
 
-/*
-* 1st Task, Tlternative Solution
-* var ul = document.querySelector("ul");
-* ul.style.listStyleType = "decimal";
-*/ 
+//3
+const cssObj = window.getComputedStyle(document.body, null);
+const mLeft = cssObj.getPropertyValue("margin-left");
+console.log(mLeft);
 
-// 2nd Task
-// https://www.w3schools.com/jsref/prop_element_classlist.asp
-info.classList.add("hide");
-
-// 3rd Task
-// https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
-const bodyStyles = window.getComputedStyle(body, null);
-const margin = bodyStyles.getPropertyValue("margin-left");
-console.log(margin);
-
-// 4th Task
-// https://www.w3schools.com/js/js_htmldom_animate.asp
-var marginNum = parseInt(margin);
-var animate = setInterval(frame, 50);
-var reverse = false;
-
-function frame() {
-    if (reverse) {
-        marginNum--;
-    } else {
-        marginNum++;
+//4
+(function myMove() {
+    let id = null;
+    let margin = 0;
+    clearInterval(id);
+    id = setInterval(frame, 50);
+    function frame() {
+      if (margin == 30) {
+        clearInterval(id);
+      } else {
+        margin++;
+        document.body.style.margin = margin + 'px';
+      }
     }
-
-    if (marginNum == 30) {
-        reverse = true;
-    }
-
-    if (marginNum == 0) {
-        reverse = false;
-    }
-
-    body.style.margin = marginNum + "px";
-}
+  })()

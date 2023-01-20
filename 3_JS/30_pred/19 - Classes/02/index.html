@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+
+<body>
+
+    <div>
+        <label for="phone">Phone number</label>
+        <input id="phone" name="tel" type="tel" size="10" oninput="getNumber()">
+        <button id="button-1" type="submit" onclick="myButtonFunction()">Submit</button>
+    </div>
+
+    <script>
+        let regex = new RegExp('[0 - 9]');
+        let number = 0;
+
+        function getNumber() {
+            number = parseInt(document.getElementById('phone').value);
+            console.log(number);
+            console.log(typeof number);
+            console.log(regex.test(number));
+        }
+
+        function myButtonFunction() {
+            if (regex.test(number) == true) {
+                window.alert(number);
+            } else {
+                window.alert('Only numbers!');
+            }
+        }
+    </script>
+</body>
+
+</html>

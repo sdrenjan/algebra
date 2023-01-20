@@ -1,0 +1,3 @@
+ZADATAK: Napravite 1 klasu koja u konstruktoru ima barem 3 svojstva, te barem 2 metode. Potom napravite novu klasu koja EXTENDA prvu klasu, te ima 1 novo svojstvo (min) i barem 1 novu metodu. Outputajte u konzoli po izboru metodu ili svojstva.
+Zadatak: 20 min
+Traje do: 18:50h

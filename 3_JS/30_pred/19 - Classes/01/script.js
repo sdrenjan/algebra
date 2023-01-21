@@ -1,10 +1,9 @@
 class Character {
-    constructor(firstName, lastName, birthplace, age, gender, virtue) {
+    constructor(firstName, lastName, birthplace, age, virtue) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthplace = birthplace;
         this.age = age;
-        this.gender = gender;
         this.virtue = virtue;
     }
 
@@ -15,15 +14,19 @@ class Character {
     quote() {
         return `${this.firstName} says: "${this.virtue}"`
     }
-
-    gender() {
-        if (this.gender == 
+    
+    underage(){
+        if (this.age >= 18) {
+            return `${this.firstName} is not underage.`;
+        } else {
+            return `${this.firstName} is underage.`
+        }
     }
 }
 
 class Task extends Character {
-    constructor(firstName, lastName, birthplace, age, gender, virtue, job, weapons) {
-        super(firstName, lastName, birthplace, age, gender, virtue)
+    constructor(firstName, lastName, birthplace, age, virtue, job, weapons) {
+        super(firstName, lastName, birthplace, age, virtue)
         this.job = job;
         this.weapons = weapons;
     }
@@ -32,3 +35,5 @@ class Task extends Character {
         return `${this.firstName} is ${this.job} and uses ${this.weapons}`
     }
 }
+
+console.log(basicInfo());

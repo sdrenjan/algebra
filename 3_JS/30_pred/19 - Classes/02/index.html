@@ -10,28 +10,33 @@
 
 <body>
 
-    <div>
+    <div id="div1">
         <label for="phone">Phone number</label>
-        <input id="phone" name="tel" type="tel" size="10" oninput="getNumber()">
-        <button id="button-1" type="submit" onclick="myButtonFunction()">Submit</button>
+        <input id="phone" name="tel" type="tel" size="10">
+        <button id="button-1" type="submit">Submit</button>
     </div>
 
     <script>
-        let regex = new RegExp('[0 - 9]');
-        let number = 0;
+        let phone = document.getElementById('phone');
+        phone.addEventListener('input', getNumber);
+        document.getElementById('button-1').addEventListener('click', myButtonFunction);
+        let regex = new RegExp('^[0-9]+$');
+        let number;
 
         function getNumber() {
-            number = parseInt(document.getElementById('phone').value);
-            console.log(number);
-            console.log(typeof number);
-            console.log(regex.test(number));
+            number = phone.value;
         }
 
         function myButtonFunction() {
             if (regex.test(number) == true) {
-                window.alert(number);
+                const newDiv = document.createElement('div');
+                const newText = document.createTextNode(`Your phone number is: ${number}`);
+                newDiv.appendChild(newText);
+
+                const currentDiv = document.getElementById('div1');
+                document.body.insertBefore(newDiv, currentDiv.nextSibling);
             } else {
-                window.alert('Only numbers!');
+                window.alert('Please enter only numbers!');
             }
         }
     </script>

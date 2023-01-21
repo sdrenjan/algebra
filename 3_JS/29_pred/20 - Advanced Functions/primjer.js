@@ -6,4 +6,10 @@ function f() {
     }
     return f;
 }
-let s = console.log(checkscope()()); 
+let s1 = console.log(checkscope()());
+let s2 = console.log(checkscope());
+
+// output:
+// local scope
+// [Function: f]
+

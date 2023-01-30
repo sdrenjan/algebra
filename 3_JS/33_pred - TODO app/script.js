@@ -12,9 +12,9 @@ anime({
     loop: true
 });
 
-// setTimeout(() => {
-//     document.getElementsByClassName('loading')[0].style.display = 'none';
-// }, 3000)
+setTimeout(() => {
+    document.getElementsByClassName('loading')[0].style.display = 'none';
+}, 3000)
 
 /**
  * MODAL 
@@ -120,5 +120,75 @@ const list = document.querySelector('ul');
 list.addEventListener('click', function (event) {
     if (event.target.tagName.toLowerCase() == 'li') {
         event.target.classList.toggle('checked');
+        if (document.querySelector('li').classList.contains('checked')) {
+            const audio = new Audio('assets/audio/ping.mp3');
+            audio.play();
+        }
     }
 }, false)
+
+const input = document.getElementById('inputField');
+input.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('add').click();
+    }
+})
+
+function newTask() {
+    const li = document.createElement('li');
+    let inputValue = document.getElementById('inputField').value;
+    const task = document.createTextNode(inputValue);
+    const error = document.getElementById('error');
+    li.appendChild(task);
+
+    if (inputValue === '' || inputValue === 'John') {
+        error.style.display = 'inline';
+        setTimeout(function () {
+            error.style.display = 'none';
+        }, 3000)
+    } else {
+        document.getElementById('list').appendChild(li);
+    }
+
+    document.getElementById('inputField').value = '';
+
+    const span = document.createElement('span');
+    const txt = document.createTextNode('\u00D7');
+
+    span.className = 'close';
+    span.appendChild(txt);
+    li.appendChild(span);
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            const div = this.parentElement;
+            div.remove();
+        }
+    }
+}
+
+function share() {
+    const ul = document.getElementById('list');
+    const listItems = document.getElementsByTagName('li');
+    let objects = {};
+
+    for (i = 0; i <= listItems.length - 1; i++) {
+        objects[i] = { task: listItems[i].firstChild.nodeValue }
+    }
+
+    (async () => {
+
+        const response = await fetch('https://63d16499d5f0fa7fbdca8666.mockapi.io/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(objects)
+        })
+
+        return console.log(response.json());
+
+    })();
+
+}

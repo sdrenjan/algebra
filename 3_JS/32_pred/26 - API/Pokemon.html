@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke API</title>
+</head>
+
+<body>
+    <h3>Pikachu moves</h3>
+    <hr>
+    <ul id='moves'></ul>
+    <script>
+        const url = "https://pokeapi.co/api/v2/pokemon/pikachu/";
+        fetch(url)
+            .then(response => response.json())
+            .then(data => showData(data))
+            .catch(error => alert(error))
+
+        let ulEl = document.getElementById('moves');
+        function showData(data) {
+            for (let i = 0; i < data.moves.length; i++) {
+                let liEl = document.createElement("li");
+                ulEl.appendChild(liEl);
+                liEl.innerHTML = data.moves[i].move.name;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

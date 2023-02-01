@@ -28,19 +28,28 @@
 </head>
 
 <body>
+    <!-- <div class="loading">
+        <div class="line-logo">
+            <svg viewbox='0 0 82 66'>
+                <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5" class="lines">
+                    <path class="st0" d="M69.4,2.2c-0.4-0.4-1-0.4-1.4,0L31.6,39.5c-0.4,0.4-1,0.4-1.4,0L13.9,24.1c-0.4-0.4-1-0.4-1.4,0l-11,11.1
+                    c-0.4,0.4-0.4,1,0,1.4l28.8,27.9c0.4,0.4,1,0.4,1.4,0l48.9-49.8c0.4-0.4,0.4-1,0-1.4L69.4,2.2z" />
+                </g>
+            </svg>
+        </div>
+    </div> -->
     <div class="container">
         <main>
             <div class="header">
                 <div class="main">
-                    <a href=""><img src="assets/logo.svg" alt="To Do"> </a>
-                    <h2 id="greeting">
-                        <p>
-                            <span>Nino</span>, focus from work to play with the best to do list app
-                            <span>(not you?)</span>
-                            <br>
-                            <span>January 25th, 2023</span>
-                        </p>
-                    </h2>
+                    <a href=""><img src="assets/logo.svg" alt="To Do"></a>
+                    <h2 id="greeting"></h2>
+                    <p>
+                        <span id="user">Nino</span>, focus from work to play with the best to do list app
+                        <span class="change-name" id="button">(not you?)</span>
+                        <br>
+                        <span id="date"></span>
+                    </p>
                 </div>
                 <div>
                     <input type="text" id="inputField" placeholder="Add a task.">
@@ -48,6 +57,26 @@
                 </div>
             </div>
         </main>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <p>Please enter your new name and click the save button. <br />Once that has been done, refresh the page
+                    to see the changes.</p>
+                    <input type="text" id="name" placeholder="First name" required>
+                    <span class="save" id="save" onclick="setUser()">Save</span>
+            </div>
+        </div>
+
+        <footer>
+            <a href="https://acme.example.com/terms">Terms of Use</a> |
+            <a href="https://acme.example.com/terms">Privacy Policy</a> |
+            <a class="post">Post to server</a>
+            <br>
+            Copyright &copy; <span id="year"></span> Acme Corporation. To Do is a trademark of Acme
+            Corporation.
+        </footer>
+        <script src="script.js" defer></script>
     </div>
 </body>
 

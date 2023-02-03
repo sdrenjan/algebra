@@ -28,7 +28,7 @@
 </head>
 
 <body>
-    <!-- <div class="loading">
+    <div class="loading">
         <div class="line-logo">
             <svg viewbox='0 0 82 66'>
                 <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-width="1.5" class="lines">
@@ -37,7 +37,7 @@
                 </g>
             </svg>
         </div>
-    </div> -->
+    </div>
     <div class="container">
         <main>
             <div class="header">
@@ -53,7 +53,7 @@
                 </div>
                 <div>
                     <input type="text" id="inputField" placeholder="Add a task.">
-                    <button class="add" onclick="newTask()">Add</button>
+                    <button class="add" id="add" onclick="newTask()">Add</button>
                 </div>
                 <span id="error">You must write a task before you can add it to the list.</span>
             </div>
@@ -76,7 +76,7 @@
         <footer>
             <a href="https://acme.example.com/terms">Terms of Use</a> |
             <a href="https://acme.example.com/terms">Privacy Policy</a> |
-            <a class="post">Post to server</a>
+            <a class="post" onclick="share()">Post to server</a>
             <br>
             Copyright &copy; <span id="year"></span> Acme Corporation. To Do is a trademark of Acme
             Corporation.

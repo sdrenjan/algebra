@@ -9,9 +9,9 @@ anime({
     loop: true
 });
 
-//setTimeout(() => {
-//    document.getElementsByClassName('loading')[0].style.display = 'none';
-//}, 3000);
+setTimeout(() => {
+    document.getElementsByClassName('loading')[0].style.display = 'none';
+}, 3000);
 
 
 //modal
@@ -138,4 +138,33 @@ function newTask() {
     }
 }
 
+const input = document.getElementById('inputField');
+input.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        document.getElementById('add').click();
+    }
+})
 
+function share() {
+    const ul = document.getElementById('list');
+    const listItems = document.getElementsByTagName('li');
+    let objects = {};
+
+    for (i = 0; i <= listItems.length - 1; i++) {
+        objects[i] = { task: listItems[i].firstChild.nodeValue }
+    }
+
+    (async () => {
+        const response = await fetch('https://63d1650b120b32bbe8f7b3e8.mockapi.io/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(objects)
+        })
+
+        return console.log(response.json());
+
+    })();
+}

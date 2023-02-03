@@ -1,0 +1,17 @@
+{
+  "name": "sdrenjan_tiny",
+  "version": "1.0.0",
+  "description": "package learning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tiny",
+    "npm",
+    "package",
+    "sdrenjan"
+  ],
+  "author": "Sanja Drenjančević",
+  "license": "ISC"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>COVID-19 API</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"></script>
+	<!-- Stylesheets -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<table>
+		<tr>
+			<th>N</th>
+			<th>Avatar</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Email</th>
+			<th>Username</th>
+			<th>Password</th>
+		</tr>
+		<tr id="target"></tr>
+	</table>
+
+	<script id="template" type="text/x-handlebars-template">
+		<tr>
+			<td>{{N}}</td>
+			<td>{{avatar}}</td>
+			<td>{{first_name}}</td>
+			<td>{{last_name}}</td>
+			<td>{{email}}</td>
+			<td>{{username}}</td>			
+			<td>{{password}}</td>
+		</tr>
+	</script>
+
+	<script>
+		window.onload = function () {
+			// Get the template
+			let template = document.getElementById('template').innerHTML;
+
+			// Compile the template
+			let compiled_template = Handlebars.compile(template);
+
+			// Render the data into the template
+			let rendered = compiled_template({ name: 'Nino', years: 25 });
+
+			// Overwrite the contents of #target with the rendered HTML
+			document.getElementById('target').innerHTML = rendered;
+
+		}
+	</script>
+
+</body>
+
+</html>

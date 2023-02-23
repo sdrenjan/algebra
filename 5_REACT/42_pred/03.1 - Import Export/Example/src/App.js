@@ -8,7 +8,7 @@ import './App.css';
 
 // IMPORTANT - Ovo morate znati
 // Više importa (redaka) zamijenili smo sa samo jednim importom
-import { Student, Program, Grades, Person } from './Components';
+import { Student, Program, Grades, Person, Syntax } from './Components';
 
 // IMPORTANT - Ovo morate znati
 // Named export
@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Student />
-      {/* <Program />
+      <Program />
       <Grades />
       Person is: {Person.name}
       <br />
@@ -30,7 +30,8 @@ function App() {
       {greet('Nino')}
       Student: {student}
       <br />
-      Sum is: {all.sum(10, all.num1)} */}
+      Sum is: {all.sum(10, all.num1)}
+      <Syntax />
     </div>
   );
 }

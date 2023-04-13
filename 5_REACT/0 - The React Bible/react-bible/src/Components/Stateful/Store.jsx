@@ -4,7 +4,7 @@ import React from 'react';
 export default class Store extends React.Component {
     // State in this context is a RESERVED property
     state = {
-        sell: 'anything'
+        sell: "anything"
     };
 
     render() {

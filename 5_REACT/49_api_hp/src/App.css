@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.Potter {
+  display: flex;
+}
+
+.House {
+  padding: 20px;
+  flex: 1;
+}

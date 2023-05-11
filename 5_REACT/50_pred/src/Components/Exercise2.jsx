@@ -12,7 +12,7 @@ export default function Exercise2() {
             <h1>Exercise 2</h1>
             <p>Your task is to show or hide the text bellow based on a button click</p>
             <div>
-                <button onClick={toggleElement}>Hide Element Below</button>
+                <button onClick={toggleElement}>{element === 'Toggle Challenge' ? 'Hide Element Below' : 'Show Element Below'}</button>
                 <p>{element}</p>
             </div>
         </div>

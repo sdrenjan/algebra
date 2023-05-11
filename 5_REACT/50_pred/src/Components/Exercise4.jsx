@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 export default function Exercise4() {
 
-    const [number1, setNumber1] = useState(0);
-    const [number2, setNumber2] = useState(0);
+    const [number1, setNumber1] = useState();
+    const [number2, setNumber2] = useState();
     const [sum, setSum] = useState(0);
 
     function inputNumber1(e) {

@@ -29,6 +29,7 @@ export default function Main() {
     function handleReset() {
         setUser('');
         setData('');
+        setRepo([]);
         setSubmitted(false);
     }
 
